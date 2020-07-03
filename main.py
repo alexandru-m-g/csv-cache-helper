@@ -3,6 +3,9 @@ import csv
 import codecs
 import urllib.request as url_req
 import shutil
+import os
+
+FOLDER_NAME = 'data'
 
 
 def create_file():
@@ -12,7 +15,8 @@ def create_file():
             url = source.get('url')
             data = None
             type = source.get('type')
-            filename = '{}.{}'.format(source.get('name'), source.get('extension'))
+            create_folder_if_necessary('{}/'.format(FOLDER_NAME))
+            filename = '{}/{}.{}'.format(FOLDER_NAME, source.get('name'), source.get('extension'))
             if type == 'json-objects':
                 data = json_object_pull_data(url)
                 if not data:
@@ -22,6 +26,10 @@ def create_file():
             if data:
                 with open(filename, 'w') as out:
                     out.write(data)
+
+
+def create_folder_if_necessary(folder_name):
+    os.makedirs(os.path.dirname(folder_name), exist_ok=True)
 
 
 def json_object_pull_data(url):
