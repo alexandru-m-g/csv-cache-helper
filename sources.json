@@ -1,15 +1,8 @@
 [
     {
-        "name": "catalog_predictive_models",
-        "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vSptqviqSQiBa6vr-7uC9t0M-F-VkPNUsf49oxMQZjGl0y54poe-vy2oUA89a9L8VFfeQNwOzrs8tMy/pub?output=csv",
+        "name": "fts_qc_test",
+        "url": "https://docs.google.com/spreadsheets/d/1MArQSVdbLXLaQ8ixUKo9jIjifTCVDDxTJYbGoRuw3Vw/export?format=csv",
         "type": "simple",
         "extension": "csv"
-    },
-    {
-        "name": "catalog_predictive_models",
-        "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vSptqviqSQiBa6vr-7uC9t0M-F-VkPNUsf49oxMQZjGl0y54poe-vy2oUA89a9L8VFfeQNwOzrs8tMy/pub?output=csv",
-        "type": "json-objects",
-        "extension": "json"
     }
-
 ]
